@@ -1,6 +1,5 @@
 var React = require('react'),
-    assign = require('object.assign'),
-    i18n = (typeof I18n === 'undefined') ? require('i18n-js') : I18n;
+    assign = require('object.assign');
 
 var FormattedMessage = React.createClass({
     displayName: 'FormattedMessage',
@@ -8,6 +7,7 @@ var FormattedMessage = React.createClass({
         message: React.PropTypes.string.isRequired
     },
     render: function(){
+        var i18n = (typeof I18n === 'undefined') ? require('i18n-js') : I18n;
         var props = assign({}, this.props);
         
         var message = props.message;
@@ -15,7 +15,7 @@ var FormattedMessage = React.createClass({
         var options = props;
             
         return React.createElement(
-            "span", null, (I18n || i18n).translate(message, options))
+            "span", null, i18n.translate(message, options))
     }
 });
 
