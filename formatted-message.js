@@ -7,7 +7,7 @@ var FormattedMessage = React.createClass({
         message: React.PropTypes.string.isRequired
     },
     render: function(){
-        var i18n = (typeof I18n === 'undefined') ? require('i18n-js') : I18n;
+        var t = require('./translate');
         var props = assign({}, this.props);
         
         var message = props.message;
@@ -15,7 +15,7 @@ var FormattedMessage = React.createClass({
         var options = props;
             
         return React.createElement(
-            "span", null, i18n.translate(message, options))
+            "span", null, t(message, options))
     }
 });
 
