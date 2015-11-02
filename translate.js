@@ -1,4 +1,4 @@
-var assign = require('object.assign');
+var assign = require('object-assign');
 
 function fallback(i18n, message, options){
     var lookup = i18n.lookup(message);
@@ -9,7 +9,7 @@ function fallback(i18n, message, options){
 function fallbackSearch(i18n, message, options){
     scope = options['scope'] || "";
     var scopes = scope.split('.');
-    
+
     if(scopes.length == 1){ // no more fallback
         return undefined;
     }else{
@@ -27,7 +27,7 @@ function fallbackSearch(i18n, message, options){
 module.exports = function(message, options){
     var i18n = (typeof I18n === 'undefined') ? require('i18n-js') : I18n;
     var translated = i18n.translate(message, options);
-             
-    return translated.indexOf('[missing') == 0 ? 
+
+    return translated.indexOf('[missing') == 0 ?
         fallback(i18n, message, options) || translated : translated;
 }
