@@ -18,7 +18,7 @@ function fallbackSearch(i18n, message, options){
         options['scope'] = scopes.join('.');
 
         var translated = i18n.translate(message, options);
-        return translated.indexOf('[missing') == 0 ?
+        return !translated || translated.indexOf('[missing') == 0 ?
             fallbackSearch(i18n, message, options) : translated;
     }
 }
@@ -28,6 +28,6 @@ module.exports = function(message, options){
     var i18n = (typeof I18n === 'undefined') ? require('i18n-js') : I18n;
     var translated = i18n.translate(message, options);
 
-    return translated.indexOf('[missing') == 0 ?
+    return !translated || translated.indexOf('[missing') == 0 ?
         fallback(i18n, message, options) || translated : translated;
 }
