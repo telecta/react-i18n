@@ -1,6 +1,6 @@
 {
   "name": "react-i18n",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "i18n-js integration with React",
   "readme": "README.md",
   "main": "index.js",
@@ -26,7 +26,9 @@
   "homepage": "https://github.com/alvinsj/react-i18n",
   "dependencies": {
     "i18n-js": ">=1.0.0",
-    "object-assign": "^4.0.1",
-    "react": ">=0.12.1"
+    "object-assign": "^4.0.1"
+  },
+  "peerDependencies": {
+    "react": "^0.14.0"
   }
 }
