@@ -5,7 +5,7 @@
   "readme": "README.md",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -25,10 +25,16 @@
   },
   "homepage": "https://github.com/alvinsj/react-i18n",
   "dependencies": {
+    "create-react-class": "15.6.3",
     "i18n-js": ">=1.0.0",
     "object-assign": "^4.0.1"
   },
   "peerDependencies": {
-    "react": "^0.14.0 || ^15.0.0"
+    "prop-types": "^15.6.x",
+    "react": "^16.3.2"
+  },
+  "devDependencies": {
+    "jest": "^22.4.3",
+    "react-test-renderer": "^16.3.2"
   }
 }
