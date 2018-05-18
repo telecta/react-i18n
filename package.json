@@ -5,7 +5,7 @@
   "readme": "README.md",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "yarn add --peer react prop-types && jest"
   },
   "repository": {
     "type": "git",
