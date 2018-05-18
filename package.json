@@ -1,6 +1,6 @@
 {
   "name": "react-i18n",
-  "version": "0.0.6",
+  "version": "1.0.0",
   "description": "i18n-js integration with React",
   "readme": "README.md",
   "main": "index.js",
@@ -11,13 +11,7 @@
     "type": "git",
     "url": "https://github.com/alvinsj/react-i18n.git"
   },
-  "keywords": [
-    "i18n",
-    "internationalization",
-    "react",
-    "intl",
-    "reactjs"
-  ],
+  "keywords": ["i18n", "internationalization", "react", "intl", "reactjs"],
   "author": "email.to.alvin@gmail.com",
   "license": "MIT",
   "bugs": {
