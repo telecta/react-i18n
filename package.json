@@ -1,6 +1,6 @@
 {
   "name": "react-i18n",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "i18n-js integration with React",
   "readme": "README.md",
   "main": "index.js",
