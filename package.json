@@ -1,23 +1,17 @@
 {
   "name": "react-i18n",
-  "version": "0.0.6",
+  "version": "1.0.0",
   "description": "i18n-js integration with React",
   "readme": "README.md",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "yarn add --peer react prop-types && jest"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/alvinsj/react-i18n.git"
   },
-  "keywords": [
-    "i18n",
-    "internationalization",
-    "react",
-    "intl",
-    "reactjs"
-  ],
+  "keywords": ["i18n", "internationalization", "react", "intl", "reactjs"],
   "author": "email.to.alvin@gmail.com",
   "license": "MIT",
   "bugs": {
@@ -25,10 +19,16 @@
   },
   "homepage": "https://github.com/alvinsj/react-i18n",
   "dependencies": {
+    "create-react-class": "15.6.3",
     "i18n-js": ">=1.0.0",
     "object-assign": "^4.0.1"
   },
   "peerDependencies": {
-    "react": "^0.14.0 || ^15.0.0"
+    "prop-types": "^15.6.x",
+    "react": "^16.3.2"
+  },
+  "devDependencies": {
+    "jest": "^22.4.3",
+    "react-test-renderer": "^16.3.2"
   }
 }
